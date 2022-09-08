@@ -68,7 +68,7 @@ jobs:
       id: build-image
       env:
         ECR_REGISTRY: s4g6f1b8
-        IMAGE_TAG: sample-app
+        IMAGE_TAG: sample_app
       run: |
         # Build a docker container and
         # push it to ECR so that it can
