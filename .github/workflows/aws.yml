@@ -40,7 +40,6 @@ env:
   CONTAINER_NAME: sample-app                        # set this to the name of the container in the
                                                     # containerDefinitions section of your task definition
   ECR_REGISTRY: s4g6f1b8
-  IMAGE_TAG: sample_app
 
 permissions:
   contents: read
@@ -72,9 +71,9 @@ jobs:
         # Build a docker container and
         # push it to ECR so that it can
         # be deployed to ECS.
-        docker build -t ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}
-        docker push ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}
-        echo "::set-output name=image::${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}"
+        docker build -t ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}
+        docker push ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}
+        echo "::set-output name=image::${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}"
 
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-def
