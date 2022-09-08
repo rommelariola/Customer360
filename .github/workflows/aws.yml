@@ -40,6 +40,7 @@ env:
   CONTAINER_NAME: sample-app                        # set this to the name of the container in the
                                                     # containerDefinitions section of your task definition
   ECR_REGISTRY: s4g6f1b8
+  IMAGE_TAG: sample_app
 
 permissions:
   contents: read
