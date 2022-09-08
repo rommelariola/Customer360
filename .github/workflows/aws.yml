@@ -31,5 +31,6 @@ jobs:
 
     - name: Build, tag, and push image to Amazon ECR
       run: |
-        docker build -t public.ecr.aws/s4g6f1b8/c360:latest .
+        docker build -t c360 .
+        docker tag c360:latest public.ecr.aws/s4g6f1b8/c360:latest
         docker push public.ecr.aws/s4g6f1b8/c360:latest
