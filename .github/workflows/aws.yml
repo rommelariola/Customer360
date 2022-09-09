@@ -17,5 +17,4 @@ jobs:
         access-key-id: AKIA2TRO5ZCMAXIIQNJB
         secret-access-key: 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
         region: ap-southeast-1
-        local-image: c360
-        image: c360, c360:latest
+        image: public.ecr.aws/s4g6f1b8/c360, public.ecr.aws/s4g6f1b8/c360:latest
